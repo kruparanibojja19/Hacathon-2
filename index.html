@@ -184,11 +184,13 @@ section {
 .hero-title-line1 {
   font-family: 'Orbitron', monospace;
   font-size: clamp(0.65rem, 1.4vw, 0.95rem);
+  background: #1218196d;
   font-weight: 400; letter-spacing: 0.6em;
-  color:black;
+  color:var(--glow-blue);
   text-shadow: 0 0 20px rgba(79,195,247,0.5);
   opacity: 0; animation: fadeInUp 1s ease 0.8s forwards;
   margin-bottom: 12px;
+  
 }
 
 .hero-title-main {
@@ -1064,6 +1066,15 @@ section {
   .nav-links { display: none !important; }
 }
 
+
+@media (max-width: 768px) {
+  .hero-image-wrap img {
+    object-fit: cover;
+    object-position: center bottom;
+    transform: scale(0.9); /* zoom OUT slightly */
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1188,7 +1199,7 @@ section {
   <div class="orbit-ring" style="width:180px;height:180px;top:30%;right:25%;animation-duration:20s;animation-direction:reverse;"></div>
 
   <div class="hero-content">
-    <div class="mission-tag">The Story of a Dream</div>
+    
     <div class="hero-title-line1"><b>THE JOURNEY BEGINS</b></div>
     <div class="hero-title-main">Before<br>the Stars</div>
     <div class="hero-divider"></div>
